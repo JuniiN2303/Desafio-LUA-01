@@ -26,20 +26,26 @@ local function getProgressBar(atributte)
     return result
 end
 
--- Aqui está o RG do NPC
-print("=======================================================")
-print("| Nome do NPC: " .. nameNpc)
-print("| Descrição do NPC: " .. description)
-print("| Emoji: " .. emoji)
-print("| Item Dropado: " .. item)
-print("| ")
-print("| Atributos NPC: ")
-print("|        Ataque: " .. getProgressBar(attackNpc))
-print("|        Defesa: " .. getProgressBar(defenseNPC))
-print("|    Vitalidade: " .. getProgressBar(hpNpc))
-print("|    Velocidade: " .. getProgressBar(speedNpc))
-print("|  Inteligência: " .. getProgressBar(inteligenceNpc))
-print("=======================================================")
+local function rgNpc()
+local barLeft = "🆔"
+local barTopBottom = "🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔🆔"
+
+print(barTopBottom)
+print(barLeft .. " Nome do NPC: " .. nameNpc .. "                                                                  🆔")
+print(barLeft .. " Descrição do NPC: " .. description .. "  🆔")
+print(barLeft .. " Emoji: " .. emoji .. "                                                                          🆔")
+print(barLeft .. " Item Dropado: " .. item .. "                                                             🆔")
+print(barLeft .. " " .. "                                                                                         🆔")
+print(barLeft .. " Atributos NPC: " .. "                                                                          🆔")
+print(barLeft .. "        Ataque: " .. getProgressBar(attackNpc) .. "                                                      🆔")
+print(barLeft .. "        Defesa: " .. getProgressBar(defenseNPC).. "                                                      🆔")
+print(barLeft .. "    Vitalidade: " .. getProgressBar(hpNpc).. "                                                      🆔")
+print(barLeft .. "    Velocidade: " .. getProgressBar(speedNpc).. "                                                      🆔")
+print(barLeft .. "  Inteligência: " .. getProgressBar(inteligenceNpc).. "                                                      🆔")
+print(barTopBottom)
+end
+
+print(rgNpc())
 
 -- Espaçamento...
 print("")
